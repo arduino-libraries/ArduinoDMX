@@ -29,12 +29,13 @@ DMXClass::DMXClass() :
 
 int DMXClass::begin(int universeSize)
 {
-  if (universeSize < 1 || universeSize > DMX_MAX_SLOTS) {
+  if (universeSize < 1 || universeSize > DMX_MAX_CHANNELS) {
     return 0;
   }
 
   _universeSize = universeSize;
   _transmissionBegin = false;
+  memset(_values, 0x00, _universeSize);
 
   RS485.begin(250000, SERIAL_8N2);
   RS485.beginTransmission();
@@ -51,31 +52,17 @@ void DMXClass::end()
 int DMXClass::beginTransmission()
 {
   _transmissionBegin = true;
-  _address = 1;
-
-  memset(_values, 0x00, _universeSize);
 
   return 1;
 }
 
-int DMXClass::write(int address, byte value)
+int DMXClass::write(int channel, byte value)
 {
-  if (!_transmissionBegin || address < 1 || address > _universeSize) {
+  if (!_transmissionBegin || channel < 1 || channel > _universeSize) {
     return 0;
   }
 
-  _values[address] = value;
-
-  return 1;
-}
-
-int DMXClass::write(byte value)
-{
-  if (!write(_address, value)) {
-    return 0;
-  }
-
-  _address++;
+  _values[channel] = value;
 
   return 1;
 }

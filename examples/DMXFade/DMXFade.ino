@@ -1,7 +1,7 @@
 /*
   DMX Fade
 
-  This sketch fades the value of slot 1 between 0 and 255 in steps to create a fade effect.
+  This sketch fades the value of DMX channel 1 between 0 and 255 in steps to create a fade effect.
   All other slots are set to a value of 0.
 
   Circuit:
@@ -38,7 +38,7 @@ void setup() {
 }
 
 void loop() {
-  // set the value of slot 1, unwritten slots are set to value of 0
+  // set the value of channel 1
   DMX.beginTransmission();
   DMX.write(1, brightness);
   DMX.endTransmission();

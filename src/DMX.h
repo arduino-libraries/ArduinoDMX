@@ -22,25 +22,23 @@
 
 #include <Arduino.h>
 
-#define DMX_MAX_SLOTS 512
+#define DMX_MAX_CHANNELS 512
 
 class DMXClass {
   public:
     DMXClass();
 
-    int begin(int universeSize = DMX_MAX_SLOTS);
+    int begin(int universeSize = DMX_MAX_CHANNELS);
     void end();
 
     int beginTransmission();
-    int write(int address, byte value);
-    int write(byte value);
+    int write(int channel, byte value);
     int writeAll(byte value);
     int endTransmission();
 
   private:
     int _universeSize;
-    byte _values[1 + DMX_MAX_SLOTS];
-    int _address;
+    byte _values[1 + DMX_MAX_CHANNELS];
     bool _transmissionBegin;
 };
 

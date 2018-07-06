@@ -1,7 +1,7 @@
 /*
   DMX Blink
 
-  This sketch toggles the value of DMX slots between 255 and 0.
+  This sketch toggles the value of DMX channel 1 between 255 and 0.
 
   Circuit:
    - DMX light
@@ -34,16 +34,16 @@ void setup() {
 }
 
 void loop() {
-  // set all slot values to 255
+  // set channel 1 value to 255
   DMX.beginTransmission();
-  DMX.writeAll(255);
+  DMX.write(1, 255);
   DMX.endTransmission();
 
   delay(1000);
 
-  // set all slot values to 0
+  // set channel 1 value to 0
   DMX.beginTransmission();
-  DMX.writeAll(0);
+  DMX.write(1, 0);
   DMX.endTransmission();
 
   delay(1000);
