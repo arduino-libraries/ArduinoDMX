@@ -38,14 +38,12 @@ int DMXClass::begin(int universeSize)
   memset(_values, 0x00, _universeSize);
 
   RS485.begin(250000, SERIAL_8N2);
-  RS485.beginTransmission();
 
   return 1;
 }
 
 void DMXClass::end()
 {
-  RS485.endTransmission();
   RS485.end();
 }
 
@@ -76,10 +74,12 @@ int DMXClass::writeAll(byte value)
 
 int DMXClass::endTransmission()
 {
+  RS485.beginTransmission();
   RS485.sendBreakMicroseconds(88);
   delayMicroseconds(12);
 
   RS485.write(_values, _universeSize + 1);
+  RS485.endTransmission();
 
   _transmissionBegin = false;
 
