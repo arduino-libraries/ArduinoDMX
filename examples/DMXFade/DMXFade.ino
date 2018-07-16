@@ -18,8 +18,8 @@
   by Sandeep Mistry
 */
 
-#include <RS485.h> // the DMX library depends on the RS485
-#include <DMX.h>
+#include <ArduinoRS485.h> // the ArduinoDMX library depends on ArduinoRS485
+#include <ArduinoDMX.h>
 
 const int universeSize = 16;
 

@@ -1,11 +1,12 @@
 #######################################
-# Syntax Coloring Map For DMX
+# Syntax Coloring Map For ArduinoDMX
 #######################################
 
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
 
+ArduinoDMX	KEYWORD1
 DMX	KEYWORD1
 
 #######################################

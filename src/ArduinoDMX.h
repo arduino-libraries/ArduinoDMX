@@ -17,31 +17,9 @@
   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#ifndef _DMX_H_INCLUDED
-#define _DMX_H_INCLUDED
+#ifndef _ARDUINO_DMX_H_INCLUDED
+#define _ARDUINO_DMX_H_INCLUDED
 
-#include <Arduino.h>
-
-#define DMX_MAX_CHANNELS 512
-
-class DMXClass {
-  public:
-    DMXClass();
-
-    int begin(int universeSize = DMX_MAX_CHANNELS);
-    void end();
-
-    int beginTransmission();
-    int write(int channel, byte value);
-    int writeAll(byte value);
-    int endTransmission();
-
-  private:
-    int _universeSize;
-    byte _values[1 + DMX_MAX_CHANNELS];
-    bool _transmissionBegin;
-};
-
-extern DMXClass DMX;
+#include "DMX.h"
 
 #endif
