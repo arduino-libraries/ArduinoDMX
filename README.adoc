@@ -2,7 +2,7 @@
 
 Control DMX lights with your Arduino. 
 
-Using the RS485 shields, like the MKR 485 shield. This library depends on the ArduinoRS485 library.
+Using RS485 shields, like the MKR 485 Shield. This library depends on the ArduinoRS485 library.
 
 For more information about this library please visit us at
 http://www.arduino.cc/en/Reference/ArduinoDMX
