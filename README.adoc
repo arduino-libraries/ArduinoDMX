@@ -1,5 +1,7 @@
 = DMX Library for Arduino =
 
+image:https://github.com/arduino-libraries/ArduinoDMX/workflows/Compile%20Examples/badge.svg["Compile Examples Status", link="https://github.com/arduino-libraries/ArduinoDMX/actions?workflow=Compile+Examples"] image:https://github.com/arduino-libraries/ArduinoDMX/workflows/Spell%20Check/badge.svg["Spell Check Status", link="https://github.com/arduino-libraries/ArduinoDMX/actions?workflow=Spell+Check"]
+
 Control DMX lights with your Arduino. 
 
 Using RS485 shields, like the MKR 485 Shield. This library depends on the ArduinoRS485 library.
