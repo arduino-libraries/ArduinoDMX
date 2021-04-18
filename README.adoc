@@ -1,6 +1,9 @@
-= DMX Library for Arduino =
+:repository-owner: arduino-libraries
+:repository-name: ArduinoDMX
 
-image:https://github.com/arduino-libraries/ArduinoDMX/workflows/Compile%20Examples/badge.svg["Compile Examples Status", link="https://github.com/arduino-libraries/ArduinoDMX/actions?workflow=Compile+Examples"] image:https://github.com/arduino-libraries/ArduinoDMX/workflows/Spell%20Check/badge.svg["Spell Check Status", link="https://github.com/arduino-libraries/ArduinoDMX/actions?workflow=Spell+Check"]
+= {repository-name} Library for Arduino =
+
+image:https://github.com/{repository-owner}/{repository-name}/actions/workflows/compile-examples.yml/badge.svg["Compile Examples status", link="https://github.com/{repository-owner}/{repository-name}/actions/workflows/compile-examples.yml"]
 
 Control DMX lights with your Arduino. 
 
