@@ -51,9 +51,6 @@ jobs:
           - fqbn: arduino:megaavr:nona4809
             platforms: |
               - name: arduino:megaavr
-          - fqbn: arduino:sam:arduino_due_x_dbg
-            platforms: |
-              - name: arduino:sam
           - fqbn: arduino:samd:arduino_zero_edbg
             platforms: |
               - name: arduino:samd
